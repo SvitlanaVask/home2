@@ -6,40 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Studio</title>
+    
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
     <!-- Шапка -->
-    <header>
-        <h1>
-            <a href="/index.html">WebStudio</a>
-        </h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="">Студія</a>
+    <header class="header">
+        <a href="./index.html" class="header-logo"> <span class="accent-logo">Web</span>Studio</a>
+        <nav class="header-nav">
+            <ul class="header-list list">
+                <li class="header-item">
+                    <a href="" class="header-link">Студія</a>
                 </li>
-                <li>
-                    <a href="">Портфоліо</a>
+                <li class="header-item">
+                    <a href="./portfolio.html" class="header-link">Портфоліо</a>
                 </li>
-                <li>
-                    <a href="">Контакти</a>
+                <li class="header-item">
+                    <a href="" class="header-link">Контакти</a>\watch
                 </li>
             </ul>
         </nav>
-        <ul>
+        <ul class="header-contacts list">
             <li>
-                <a href="mailto:info@devstudio.com">info@devstudio.com</a><br>
+                <a href="mailto:info@devstudio.com" class="contacts-email">info@devstudio.com</a><br>
             </li>
-            <li>
-                <a href="tel:+380961111111">+38 096 111 11 11</a>
+            <li class="header-link">
+                <a href="tel:+380961111111" class="contacts-phone">+38 096 111 11 11</a>
             </li>
         </ul>
-
+    
     </header>
     <!-- Фільтри -->
     <section>
-        <h2 style="display: none;"> Фільтри</h2>
+        <h1 style="visually-hidden"> Фільтри</h1>
         <ul>
             <li><button type="button">Усі</button></li>
             <li><button type="button">Веб-сайти</button></li>
@@ -52,7 +52,7 @@
     <section>
         <h2 style="display: none;"> Портфоліо</h2>
         <ul>
-            <li>
+            <li class="list">
                 <img src="./images/proj1.jpg" alt="Технокряк" width="370">
                 <h3>Технокряк</h3>
                 <p>Веб-сайт</p>
@@ -103,7 +103,7 @@
     <!-- Підвал -->
     <footer>
         <p><a href="/index.html">WebStudio</a></p>
-        <address>
+        <address class="contacts-address">
             м. Київ, пр-т Лесі Українки, 26 <br>
             <a href="mailto:info@devstudio.com">info@devstudio.com</a><br>
             <a href="tel:+380961111111">+38 096 111 11 11</a>

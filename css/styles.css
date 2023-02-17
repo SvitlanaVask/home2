@@ -1,0 +1,120 @@
+
+/* Кольори */
+/* фон  #F5F5F5;*/
+/* білий #FFFFFF; */
+/* Лого #000000 */
+/* Акцент #2196F3  */
+/* Текст під заголовком #757575 */
+/* Колір заголовків #212121 */
+
+:root {
+--primary-text-color:#757575;
+--title-text-color: #212121;
+--accent-color: #2196F3;
+--background-color: #F5F5F5;
+}
+
+body {
+font-family: Roboto, sans-serif;
+background-color: var(--background-color);
+color: var(--primary-text-color);
+}
+
+.list{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+/* Шапка (Лого+Плсилання+контакти) */
+.header-logo {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+
+.accent-logo {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+}
+
+.header-link, .contacts-email, .contacts-phone {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    
+        color: #212121;
+}
+
+.header-link:hover, .contacts-email:hover,
+.header-link:focus, .contacts-email:focus {
+    color: var(--accent-color);
+}
+
+/* Герой \ hero */
+.hero-title {
+font-weight: 900;
+font-size: 44px;
+line-height: 1.36;
+text-align: center;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.hero-btn {
+font-weight: 700;
+font-size: 16px;
+line-height: 1.88;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.06em;
+color: #FFFFFF;
+}
+
+/* Особливості \ features */
+.feature-post-title{
+font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+}
+
+.feature-text{
+font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+        letter-spacing: 0.03em;
+    color:var(--primary-text-color);
+}
+
+/* Футер \ contacts */
+.contacts-address {
+    font-style: normal;
+}
