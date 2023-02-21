@@ -15,7 +15,19 @@
   --footer-color: #2f303a;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  margin: 0;
+
   background-color: var(--background-color);
   color: var(--primary-text-color);
 
@@ -23,12 +35,36 @@ body {
   letter-spacing: 0.03em;
 }
 
-.list {
-  list-style: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
+/* Утиліти */
 .link {
   text-decoration: none;
+}
+
+.list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* Верхні відступи від секцій 94рх */
+.top-sp {
+  padding-top: 94px;
+}
+
+/* Нижні відступи від секцій 94рх */
+.bottom-sp {
+  padding-bottom: 94px;
 }
 
 .visually-hidden {
@@ -44,44 +80,50 @@ body {
   margin: -1px;
 }
 
-.btn {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  border-radius: 4px;
-}
-
-.btn.primary {
-  color: var(--background-color);
-  background-color: var(--accent-color);
-}
-
-.btn.secondary {
-  color: var(--accent-color);
-  background-color: var(--background-color);
-}
-
 /* Заголовки рівня h2 */
 .section-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-  /* letter-spacing: 0.03em; */
   color: var(--title-text-color);
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid salmon;
+}
+
 /* Шапка (Лого+Плсилання+контакти) */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-list, .header-contacts {
+  display: flex;
+}
+
+.header-list .header-item:not( :last-child),
+.header-contacts .contact-item:not(:last-child) {
+  margin-right: 40px;
+}
+
 .logo {
+  margin-right: 93px;
+
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  /* letter-spacing: 0.03em; */
   color: #000000;
 }
 
@@ -90,13 +132,20 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  /* letter-spacing: 0.03em; */
   color: var(--accent-color);
+}
+.header-contacts {
+  margin-left: auto;
 }
 
 .header-link,
 .contacts-email,
 .contacts-phone {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+
   font-family: inherit;
   font-weight: 500;
   font-size: 14px;
@@ -118,20 +167,60 @@ body {
   color: var(--accent-color);
 }
 
+
+
+
+
 /* Підглянула у Льоші */
 .hero,
 .footer {
   background-color: var(--footer-color);
 }
 /* Герой \ hero */
+.hero{
+  text-align: center;
+}
+
 .hero-title {
+  /* padding-top: 200px;
+  margin-bottom: 30px; */
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
+  
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.btn {
+  display: inline-block;
+  border: transparent;
+  border-radius: 4px;
+  min-width: 216px;
+  min-height: 50px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  letter-spacing: 0.06em;
+}
+
+.btn.primary {
+  color: var(--background-color);
+  background-color: var(--accent-color);
+}
+
+.btn.secondary {
+  /* border: 5px, var(--accent-color) */
+  color: var(--accent-color);
+  background-color: var(--background-color);
 }
 .btn.primary:hover,
 .btn.primary:focus {
@@ -139,12 +228,14 @@ body {
   background-color: var(--background-color);
 }
 
+
 /* Особливості \ features */
 .feature-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  /* letter-spacing: 0.03em; */
   text-transform: uppercase;
   color: var(--title-text-color);
 }
@@ -152,7 +243,6 @@ body {
 .feature-text {
   font-size: 14px;
   line-height: 1.71;
-  /* letter-spacing: 0.03em; */
   color: var(--primary-text-color);
 }
 
@@ -160,28 +250,30 @@ body {
 
 /* Наша команда */
 .team-member {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  /* text-align: center; */
-  /* letter-spacing: 0.03em; */
   color: var(--title-text-color);
 }
 
 .team-position {
+  /* margin-bottom: 30px; */
+  
   font-size: 16px;
   line-height: 1.19;
-  /* text-align: center; */
-  /* letter-spacing: 0.03em; */
   color: var(--primary-text-color);
 }
+
+/* .team-position:last-child {
+  margin-bottom: 0;
+} */
 
 /* Футер \ contacts */
 .contacts-address {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-  /* letter-spacing: 0.03em; */
 }
 
 .address-text {
@@ -218,7 +310,6 @@ body {
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
-  /* letter-spacing: 0.03em; */
   color: var(--title-text-color);
 }
 
@@ -246,6 +337,5 @@ body {
 .portfolio-text {
   font-size: 16px;
   line-height: 1.88;
-  /* letter-spacing: 0.03em; */
   color: var(--primary-text-color);
 }
